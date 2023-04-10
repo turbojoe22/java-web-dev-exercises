@@ -1,15 +1,26 @@
 package org.launchcode.java.class3menu;
+import java.time.LocalDate;
+import java.util.Date;
 
 public class MenuItems {
     private String name;
     private String description;
     private String category;
     private double price;
-    private boolean isAvailable;
     private boolean itemNew;
-    private boolean isVegan;
     private String proteinType;
     private int spiceLevel;
+    private Date date;
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+
     public String getName() {
         return name;
     }
@@ -42,13 +53,6 @@ public class MenuItems {
         this.price = price;
     }
 
-    public boolean isAvailable() {
-        return isAvailable;
-    }
-
-    public void setAvailable(boolean available) {
-        isAvailable = available;
-    }
 
     public boolean isItemNew() {
         return itemNew;
@@ -58,13 +62,6 @@ public class MenuItems {
         this.itemNew = itemNew;
     }
 
-    public boolean isVegan() {
-        return isVegan;
-    }
-
-    public void setVegan(boolean vegan) {
-        isVegan = vegan;
-    }
 
     public String getProteinType() {
         return proteinType;
@@ -83,16 +80,14 @@ public class MenuItems {
     }
 
     public MenuItems(String name, String description, String category,
-                    boolean isAvailable, boolean itemNew,
-                    boolean isVegan, String proteinType, int spiceLevel){
+                      String proteinType, int spiceLevel, Date date){
         this.name = name;
         this.description = description;
         this.category = category;
-        this.isAvailable = isAvailable;
-        this.itemNew = itemNew;
-        this.isVegan = isVegan;
+        this.itemNew = false;
         this.proteinType = proteinType;
         this.spiceLevel = spiceLevel;
+        this.date =  date;
     };
 
 }
